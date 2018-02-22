@@ -1,0 +1,73 @@
+
+<div class="col-md-4 gravsten <?php if( $terms ){
+    foreach( $terms as $term ) {
+        echo "$term->slug ";
+    }
+}?>" onclick="currentSlides(<?=$i?>)">
+    <div id="grav-header"><h4 id="date"><?= $date?></h4>
+        <img id="small-category-logo" src="<?=$small_category_logo?>">
+    </div>
+    <div class="logo"><img src="<?=$company_logo['url']?>"></div>
+
+    <?php if( have_rows('gravstensinformation',$transaction->ID) ): ?>
+
+        <?php while(have_rows('gravstensinformation', $transaction->ID)): the_row();
+            $informationsrubrik = get_sub_field('informationsrubrik');
+            $information = get_sub_field('information', $transaction->ID);
+            ?>
+            <hr id = no-border>
+            <div class="transaction-information">
+                <span class="transaction-box"><?= $informationsrubrik?></span>
+                <span class="transaction-text"><?= $information?></span>
+            </div>
+
+        <?php endwhile; endif?>
+
+
+
+</div>
+
+<div class="modal">     </div>
+<div class ="modal-wrapper">
+    <div class="modal-content">
+        <div class="col-lg-4 left-modal">
+            <img id="popup-background" src="<?=$popup_background['url']?>">
+            <span id="close" onclick="closeModal()">&times;</span>
+
+            <div class="col-md-4 gravsten popup">
+                <div id="grav-header"><h4 id="date"><?= $date?></h4>
+                    <img id="small-category-logo" src="<?=$small_category_logo?>">
+                </div>
+                <div class="logo"><img src="<?=$company_logo['url']?>"></div>
+
+                <?php if( have_rows('gravstensinformation',$transaction->ID) ): ?>
+
+                    <?php while(have_rows('gravstensinformation', $transaction->ID)): the_row();
+                        $informationsrubrik = get_sub_field('informationsrubrik');
+                        $information = get_sub_field('information', $transaction->ID);
+                        ?>
+                        <hr id = no-border>
+                        <div class="transaction-information">
+                            <span class="transaction-box"><?= $informationsrubrik?></span>
+                            <span class="transaction-text"><?= $information?></span>
+                        </div>
+
+                    <?php endwhile; endif?>
+            </div>
+            <div class="number-wrapper">
+            <div class="number-nav">
+
+                <a class="modal-arrows" onclick="plusIndex(-1)"><img src="<?=get_template_directory_uri() . '/assets/arrow_left.png'?>"></a>
+                <span class="numbertext left"><?php/*$i?> av <?=$size*/?>Bakåt</span><span class="numbertext right"><?php/*$i?> av <?=$size*/?>Framåt</span>
+                <a class="modal-arrows" onclick="plusIndex(1)"><img src="<?=get_template_directory_uri() . '/assets/arrow_right.png'?>"></a>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-8 popup-information">
+            <img id="modal-agarskifte" src="<?= $small_category_logo?>">
+            <p><?=$popup_information?></p>
+            <hr id="no-border">
+
+        </div>
+    </div>
+</div>

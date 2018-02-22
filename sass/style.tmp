@@ -1,0 +1,58 @@
+
+/*!
+	Theme Name: Censor
+*/
+
+
+@import 'bourbon/bourbon';
+@import '__reset';
+
+.splash {
+  position: absolute;
+  display: block;
+  width: 501px;
+  margin-left: 80px;
+
+  .headline {
+    position: relative;
+
+  }
+  .preamble{
+  position: relative;
+  }
+
+  .text_field {
+  position: relative;
+
+  }
+
+  .related{
+    float:  left;
+    width: 30%;
+
+  }
+
+}
+
+.sidebarStyle {
+  position: relative;
+  width: 200px;
+
+  left: 65%;
+}
+
+  .sidebarImage{
+    left: 0%
+
+  }
+  .imageText {
+    left: 0%;
+  }
+
+
+
+img{
+  display: block;
+}
+
+
