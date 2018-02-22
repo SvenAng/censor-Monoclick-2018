@@ -105,6 +105,7 @@ window.onscroll = function() {scrollFunction()};
 
 // scroll to top button append's in CSS & HTML when user scrolls
 function scrollFunction() {
+//  console.log('scroll');
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ) {
         document.querySelector(".toTheTopWrapper").style.display = "block";
 
@@ -291,12 +292,12 @@ function burgerFunction() {
 
 
 $(document).ready(function () {
-    $('.no-fouc').removeClass('no-fouc');
-    
-        var menu = document.querySelector('.menu-huvudmeny-container');
-    menu.className = "menu-main-menu-container";
 
-
+  $('.no-fouc').removeClass('no-fouc');
+  
+  // Tagit bort dessa två rader SÄ, problem med sticky meny
+    //var menu = document.querySelector('.menu-huvudmeny-container');
+    //menu.className = "menu-main-menu-container";
 
 
     var toggleAffix = function (affixElement, scrollElement, wrapper) {

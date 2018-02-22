@@ -29,8 +29,11 @@ $j =-1?>
       ?>
           <?php if ($j == 0):?>
               <div class="carousel-item active">
-
-                  <a href="<?=$image_link?>"><div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
+               
+                  <?php if($image_link): ?>
+                    <a href="<?=$image_link?>"> 
+                  <?php endif; ?>
+                    <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
                   <div class="carousel-caption d-flex d-md-flex     <?php
 
                   if($slide_color == 'blue'){
@@ -55,12 +58,18 @@ $j =-1?>
                       ?> white-font <?php
                   }
                   ?>">
-                      <span id="slide-caption"><?= $slide_text?> </span></div></a>
+                      <span id="slide-caption"><?= $slide_text?> </span></div>
+                     <?php if($image_link): ?>
+                        </a>
+                    <?php endif; ?>
               </div>
 
           <?php elseif($i < 1):?>
               <div class="carousel-item active absolute">
-                  <a href="<?=$image_link?>">   <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
+                  <?php if($image_link): ?>
+                    <a href="<?=$image_link?>"> 
+                  <?php endif; ?>
+                    <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
                   <div class="carousel-caption d-flex d-md-flex     <?php
 
                   if($slide_color == 'blue'){
@@ -85,12 +94,18 @@ $j =-1?>
                       ?> white-font <?php
                   }
                   ?>">
-                      <span id="slide-caption"><?= $slide_text?> </span></div></a>
+                      <span id="slide-caption"><?= $slide_text?> </span></div>
+                    <?php if($image_link): ?>
+                        </a>
+                    <?php endif; ?>
               </div>
               <?php elseif($i != $j): ?>
 
               <div class="carousel-item absolute">
-                  <a href="<?=$image_link?>"> <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
+                  <?php if($image_link): ?>
+                    <a href="<?=$image_link?>"> 
+                  <?php endif; ?>
+                    <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
                   <div class="carousel-caption d-flex d-md-flex     <?php
 
 
@@ -116,13 +131,19 @@ $j =-1?>
                       ?> white-font <?php
                   }
                   ?>">
-                      <span id="slide-caption"><?= $slide_text?> </span></div></a>
+                      <span id="slide-caption"><?= $slide_text?> </span></div>
+                    <?php if($image_link): ?>
+                        </a>
+                    <?php endif; ?>
               </div>
 
 
           <?php else : ?>
               <div class="carousel-item">
-                  <a href="<?=$image_link?>"> <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
+                  <?php if($image_link): ?>
+                    <a href="<?=$image_link?>"> 
+                  <?php endif; ?>
+                    <div class='d-block img-fluid' style='background: url(<?=$slide_image['url']?>);'></div>
                   <div class="carousel-caption d-flex d-md-flex      <?php
 
                   if($slide_color == 'blue'){
@@ -147,7 +168,10 @@ $j =-1?>
                       ?> white-font <?php
                   }
                   ?>">
-                      <span id="slide-caption"><?= $slide_text?> </span></div></a>
+                      <span id="slide-caption"><?= $slide_text?> </span></div>
+                    <?php if($image_link): ?>
+                        </a>
+                    <?php endif; ?>
               </div>
 
               <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">

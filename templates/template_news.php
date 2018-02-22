@@ -21,7 +21,7 @@ $i = 0;
             $logo = get_field('logo', $nyhet->ID);
             $new = get_field('new', $nyhet->ID);
             $i++;
-            $date = date("d M Y", strtotime($nyhet->post_date));
+            $date = date("Y-m-d", strtotime($nyhet->post_date));
             ?>
 
             <?php if ($i <= 10):?>
@@ -52,7 +52,11 @@ $i = 0;
                 </div>
             <?php endif;
         }?>
-        <button class="contact-button" id="more-news" onclick="readMore()">&#62; Visa alla</button>
+        <?php if(get_locale()=='sv_SE'): ?>
+            <button class="contact-button" id="more-news" onclick="readMore()">&#62; Visa alla</button> 
+        <?php else: ?>
+            <button class="contact-button" id="more-news" onclick="readMore()">&#62; Show all</button>
+        <?php endif; ?>
     </div>
     </div>
 
