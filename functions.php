@@ -2,7 +2,7 @@
 require_once('inc/acf/setup.php');
 function addMyScript() {
     wp_enqueue_style( 'my-style', get_template_directory_uri() . '/style.css', false,  'all' );
-    // wp_register_script('censor-script', get_template_directory_uri() . '/script.min.js', false);
+    // /wp_register_script('censor-script', get_template_directory_uri() . '/script.min.js', false);
     wp_register_script('censor-script', get_template_directory_uri() . '/script.js', true);
     wp_enqueue_script('censor-script');
 }
