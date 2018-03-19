@@ -585,8 +585,10 @@ body {
 .header .menu-huvudmeny-container li a:hover {
   border-bottom: 2px solid #fda026;
 }
-.header .menu-main-menu-container li.current-menu-ancestor,
-.header .menu-huvudmeny-container li.current-menu-ancestor {
+.header .menu-main-menu-container li.current-menu-item a,
+.header .menu-main-menu-container li.current-menu-ancestor a,
+.header .menu-huvudmeny-container li.current-menu-item a,
+.header .menu-huvudmeny-container li.current-menu-ancestor a {
   border-bottom: 2px solid #fda026;
 }
 .header .menu-main-menu-container ul.sub-menu,
@@ -621,6 +623,7 @@ body {
 .header .menu-main-menu-container ul.sub-menu a,
 .header .menu-huvudmeny-container ul.sub-menu a {
   margin-left: 16px;
+  border: none !important;
 }
 .header .menu-main-menu-container li,
 .header .menu-huvudmeny-container li {
@@ -955,43 +958,42 @@ hr {
 .container .row#medarbetare {
   padding: 0 15px;
 }
-.container .col-md-5.coworker {
-  padding: 0 15px 0 0;
+.container .coworker-r1 {
+  padding: 0 8px 20px 8px;
 }
-.container .col-md-5.coworker img {
-  width: 360px;
+.container .coworker-r1 img {
+  width: 100%;
   height: auto;
 }
-.container .col-md-7.coworker {
-  padding: 0 15px;
-  margin-left: -70px;
+.container .coworker-r2 {
+  padding: 0 8px 20px 8px;
+  margin-left: 0;
 }
-.container .col-md-7.coworker h2 {
+.container .coworker-r2 h2 {
   margin-bottom: 0px;
-  margin-top: 93px;
+  margin-top: 0;
+  font-size: 30px;
 }
-.container .col-md-7.coworker #typ {
+.container .coworker-r2 #typ {
   margin-bottom: 0px;
   color: #919191;
   font-family: MyriadPro-SemiBold, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
-.container .col-md-7.coworker li {
+.container .coworker-r2 li {
   list-style-type: none;
 }
-.container .col-md-7.coworker #personal-text {
-  float: left;
+.container .coworker-r2 #personal-text {
   width: 100%;
-  padding-top: 16px;
+  padding: 10px 0;
 }
-.container .col-md-7.coworker #personal-text p {
+.container .coworker-r2 #personal-text p {
   line-height: 24px;
   margin-bottom: 0;
-  float: left;
+  font-size: 16px;
 }
-.container .col-md-7.coworker #read-more {
-  float: right;
+.container .coworker-r2 #read-more {
   margin-top: 50px;
   font-family: MyriadPro-SemiBold, sans-serif;
   line-height: 23px;

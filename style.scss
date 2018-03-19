@@ -245,10 +245,11 @@ body {
     //  border-bottom: 2px solid $hover-orange;
     //}
 
-    li.current-menu-ancestor{
+    li.current-menu-item  a,
+    li.current-menu-ancestor a{
       border-bottom: 2px solid $hover-orange;
     }
-
+    
 
 
     ul.sub-menu {
@@ -282,6 +283,7 @@ body {
 
     ul.sub-menu a{
       margin-left: 16px;
+      border: none !important;
     }
 
     //li.current-menu-item{
@@ -730,20 +732,27 @@ hr {
     padding: 0 15px;
   }
 
-  .col-md-5.coworker {
-    padding: 0 15px 0 0;
+  .coworker-r1 {
+    padding: 0 8px 20px 8px;
     img {
-      width: 360px;
+      // width: 360px;
+      // SÄ hack
+      width: 100%;
       height: auto;
     }
   }
 
-  .col-md-7.coworker {
-    padding: 0 15px;
-    margin-left: -70px;
+  .coworker-r2 {
+    padding: 0 8px 20px 8px;
+    // margin-left: -70px;
+    // SÄ hack
+    margin-left: 0;
     h2 {
       margin-bottom: 0px;
-      margin-top: 93px;
+      // margin-top: 93px;
+      // SÄ hack
+      margin-top: 0;
+      font-size: 30px;
     }
 
     #typ{
@@ -759,20 +768,22 @@ hr {
     }
 
     #personal-text {
-      float: left;
+      // float: left;
       width: 100%;
-      padding-top: 16px;
+      padding: 10px 0;
 
 
       p {
         line-height: 24px;
         margin-bottom: 0;
-        float: left;
+        // float: left;
+        // sä hack
+        font-size: 16px;
       }
 
     }
     #read-more {
-      float: right;
+      // float: right;
       margin-top: 50px;
 
       font-family: MyriadPro-SemiBold, sans-serif;

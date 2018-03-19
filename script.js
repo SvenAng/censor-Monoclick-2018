@@ -295,10 +295,11 @@ $(document).ready(function () {
 
   $('.no-fouc').removeClass('no-fouc');
   
-  // Tagit bort dessa två rader SÄ, problem med sticky meny
-    //var menu = document.querySelector('.menu-huvudmeny-container');
-    //menu.className = "menu-main-menu-container";
-
+  // Vid bortagning av raderna funkar Engelska meny + Sticky på Engelska
+  // Däremot pajjar mobilmenyn SÄ, problem
+    var menu = document.querySelector('.menu-huvudmeny-container');
+    menu.className = "menu-main-menu-container";
+ //
 
     var toggleAffix = function (affixElement, scrollElement, wrapper) {
 
