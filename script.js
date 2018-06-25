@@ -143,8 +143,10 @@ var toTop = document.querySelector(".toTheTopButton");
 
 // click function to scroll to top
 toTop.addEventListener('click', function(event) {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera
-    document.documentElement.scrollTop = 0; // For IE and Firefox
+  
+  jQuery("html, body").animate({scrollTop: 0 }, "slow");
+    
+    return false;
 });
 
 
@@ -227,12 +229,16 @@ function burgerFunction() {
 
 
     var x = document.getElementById("menu-huvudmeny");
-    console.log("x " + x);
-    if (x.className == "menu") {
-        x.className += " responsive";
+    var y = document.getElementById("menu-main-menu");
+    var z = x ? x : y;
+    //console.log("x " + x);
+    if (z.className == "menu") {
+        z.className += " responsive";
     } else {
-        x.className = "menu";
+        z.className = "menu";
     }
+
+  //console.log("x " + x);
 
     /*
      var b = document.getElementById("icon");
@@ -297,8 +303,6 @@ $(document).ready(function () {
   
   // Vid bortagning av raderna funkar Engelska meny + Sticky på Engelska
   // Däremot pajjar mobilmenyn SÄ, problem
-    var menu = document.querySelector('.menu-huvudmeny-container');
-    menu.className = "menu-main-menu-container";
  //
 
     var toggleAffix = function (affixElement, scrollElement, wrapper) {
@@ -331,6 +335,10 @@ $(document).ready(function () {
         toggleAffix(ele, $(window), wrapper);
     });
 
+    var menuSwe = document.querySelector('.menu-huvudmeny-container');
+    var menuEng = document.querySelector('.menu-main-menu-container');
+    var menu = menuSwe ? menuSwe : menuEng;
+    menu.className = "menu-main-menu-container";
 });
 
 
