@@ -1033,6 +1033,39 @@ hr {
   height: 300px;
 }
 
+#cookie-notice {
+  width: 300px;
+  min-width: inherit;
+  height: auto;
+  border-radius: 25px 25px 0 0;
+  margin-left: 1%;
+}
+
+.cookie-notice-container {
+  padding: 20px;
+}
+.cookie-notice-container a {
+  background: #00396e;
+  color: #f7f7f7;
+  padding: 6px;
+  font-size: 11px;
+  display: block;
+  width: 80px;
+  margin-left: auto !important;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.cookie-notice-container a:hover {
+  background: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  #cookie-notice {
+    width: 100% !important;
+    margin: 0;
+  }
+}
 .carousel-inner {
   align-items: center;
   justify-content: center;
